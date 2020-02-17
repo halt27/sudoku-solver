@@ -3,20 +3,10 @@
 #include "sudoku.h"
 using namespace std;
 
-// sudoku::sudoku(): solved(false) {
-//     srand(time(0));
-//     // memset(grid, 0, sizeof(grid[0][0]) * 9 * 9);
-//     for (int i = 0; i < 9; i++) {
-//         if (i != 0) {
-//             int current = (rand() % 9) + 1;
-//             if (current != grid[0][i-1])
-//                 grid[0][i] = current;
-//             else ;
-//         }
-//     }
-// }
+sudoku::sudoku(): grid{0} {
+}
 
-sudoku::sudoku(int grid[9][9]) {
+sudoku::sudoku(int grid[9][9]): grid{0} {
     for (int i = 0; i < 9; i++)
         for (int j = 0; j < 9; j++)
             this->grid[i][j] = grid[i][j]; 
